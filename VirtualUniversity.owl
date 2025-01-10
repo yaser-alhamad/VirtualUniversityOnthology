@@ -13,7 +13,6 @@
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
 
-    <!-- Classes -->
     <Declaration>
         <Class IRI="#University"/>
     </Declaration>
@@ -30,7 +29,6 @@
         <Class IRI="#Course"/>
     </Declaration>
 
-    <!-- Object Properties -->
     <Declaration>
         <ObjectProperty IRI="#manages"/>
     </Declaration>
@@ -47,7 +45,6 @@
         <ObjectProperty IRI="#hasManager"/>
     </Declaration>
 
-    <!-- Data Properties -->
     <Declaration>
         <DataProperty IRI="#hasPriceInSYP"/>
     </Declaration>
@@ -73,8 +70,6 @@
         <DataProperty IRI="#studentID"/>
     </Declaration>
 
-    <!-- Individuals -->
-    <!-- Programs -->
     <Declaration>
         <NamedIndividual IRI="#ماجستير_علوم_الويب"/>
     </Declaration>
@@ -85,7 +80,6 @@
         <NamedIndividual IRI="#ماجستير_الذكاء_الاصطناعي"/>
     </Declaration>
 
-    <!-- Teachers -->
     <Declaration>
         <NamedIndividual IRI="#دكتور_علي"/>
     </Declaration>
@@ -99,7 +93,6 @@
         <NamedIndividual IRI="#دكتور_سامي"/>
     </Declaration>
 
-    <!-- Students -->
     <Declaration>
         <NamedIndividual IRI="#أحمد_يوسف"/>
     </Declaration>
@@ -110,7 +103,6 @@
         <NamedIndividual IRI="#محمد_علي"/>
     </Declaration>
 
-    <!-- Courses -->
     <Declaration>
         <NamedIndividual IRI="#AWM"/>
     </Declaration>
@@ -121,8 +113,6 @@
         <NamedIndividual IRI="#AIProgramming"/>
     </Declaration>
 
-    <!-- Assertions -->
-    <!-- Program Assertions -->
     <ClassAssertion>
         <Class IRI="#Program"/>
         <NamedIndividual IRI="#ماجستير_علوم_الويب"/>
@@ -153,7 +143,6 @@
         <NamedIndividual IRI="#دكتور_علي"/>
     </ObjectPropertyAssertion>
 
-    <!-- Teacher Assertions -->
     <ClassAssertion>
         <Class IRI="#Teacher"/>
         <NamedIndividual IRI="#دكتور_علي"/>
@@ -169,7 +158,6 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">أستاذ دكتور</Literal>
     </DataPropertyAssertion>
 
-    <!-- Student Assertions -->
     <ClassAssertion>
         <Class IRI="#Student"/>
         <NamedIndividual IRI="#أحمد_يوسف"/>
@@ -190,6 +178,5 @@
         <NamedIndividual IRI="#ماجستير_علوم_الويب"/>
     </ObjectPropertyAssertion>
 
-    <!-- More Assertions for other teachers, students, and courses... -->
 
 </Ontology>
