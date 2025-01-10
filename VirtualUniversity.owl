@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://example.org/VirtualUniversity.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://example.org/VirtualUniversity.owl">
+    <Prefix name="" IRI="http://example.org/VirtualUniversity.owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+
+    <!-- Classes -->
+    <Declaration>
+        <Class IRI="#University"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Program"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Student"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Teacher"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Course"/>
+    </Declaration>
+
+    <!-- Object Properties -->
+    <Declaration>
+        <ObjectProperty IRI="#manages"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#teaches"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#belongsTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#enrolledIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasManager"/>
+    </Declaration>
+
+    <!-- Data Properties -->
+    <Declaration>
+        <DataProperty IRI="#hasPriceInSYP"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPriceInEUR"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMinYears"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasMaxYears"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#studentEmail"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#teacherEmail"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#teacherRank"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#studentID"/>
+    </Declaration>
+
+    <!-- Individuals -->
+    <!-- Programs -->
+    <Declaration>
+        <NamedIndividual IRI="#ماجستير_علوم_الويب"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ماجستير_علوم_البيانات"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ماجستير_الذكاء_الاصطناعي"/>
+    </Declaration>
+
+    <!-- Teachers -->
+    <Declaration>
+        <NamedIndividual IRI="#دكتور_علي"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#دكتور_مريم"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#أستاذ_فاطمة"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#دكتور_سامي"/>
+    </Declaration>
+
+    <!-- Students -->
+    <Declaration>
+        <NamedIndividual IRI="#أحمد_يوسف"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#سارة_حسن"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#محمد_علي"/>
+    </Declaration>
+
+    <!-- Courses -->
+    <Declaration>
+        <NamedIndividual IRI="#AWM"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#WebDevelopment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AIProgramming"/>
+    </Declaration>
+
+    <!-- Assertions -->
+    <!-- Program Assertions -->
+    <ClassAssertion>
+        <Class IRI="#Program"/>
+        <NamedIndividual IRI="#ماجستير_علوم_الويب"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMinYears"/>
+        <NamedIndividual IRI="#ماجستير_علوم_الويب"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasMaxYears"/>
+        <NamedIndividual IRI="#ماجستير_علوم_الويب"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPriceInSYP"/>
+        <NamedIndividual IRI="#ماجستير_علوم_الويب"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1000000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPriceInEUR"/>
+        <NamedIndividual IRI="#ماجستير_علوم_الويب"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">2000</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasManager"/>
+        <NamedIndividual IRI="#ماجستير_علوم_الويب"/>
+        <NamedIndividual IRI="#دكتور_علي"/>
+    </ObjectPropertyAssertion>
+
+    <!-- Teacher Assertions -->
+    <ClassAssertion>
+        <Class IRI="#Teacher"/>
+        <NamedIndividual IRI="#دكتور_علي"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#teacherEmail"/>
+        <NamedIndividual IRI="#دكتور_علي"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ali@example.com</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#teacherRank"/>
+        <NamedIndividual IRI="#دكتور_علي"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">أستاذ دكتور</Literal>
+    </DataPropertyAssertion>
+
+    <!-- Student Assertions -->
+    <ClassAssertion>
+        <Class IRI="#Student"/>
+        <NamedIndividual IRI="#أحمد_يوسف"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#studentEmail"/>
+        <NamedIndividual IRI="#أحمد_يوسف"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">ahmed.youssef@example.com</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#studentID"/>
+        <NamedIndividual IRI="#أحمد_يوسف"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">SVU12345</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#enrolledIn"/>
+        <NamedIndividual IRI="#أحمد_يوسف"/>
+        <NamedIndividual IRI="#ماجستير_علوم_الويب"/>
+    </ObjectPropertyAssertion>
+
+    <!-- More Assertions for other teachers, students, and courses... -->
+
+</Ontology>
